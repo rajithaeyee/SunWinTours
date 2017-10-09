@@ -1,0 +1,14 @@
+.whitebackPara{
+    border-radius: 5px;
+    border:1px solid gray;
+    padding:5px;
+}
+
+
+.whitebackPara :hover{
+    background-color:white;
+    padding:5px;
+    Opacity:0.8;
+    transition: 0.6s;
+    
+}

@@ -1,0 +1,49 @@
+<div class="container" ng-controller="commentsController">
+<div class="row">
+    <div class="col-lg-9 text-center">
+        <h2 class="section-heading">Give Us A Comment</h2>
+        <h3 class="section-subheading text-muted">Help us and others to get to know about us</h3>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <form id="contributionForm" novalidate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" ng-model="user.name" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" ng-model="user.email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="fileToUpload" id="fileToUpload" class="btn btn-default">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <select ng-model="user.country" ng-options="country.name for country in countries">
+                                <!--<option ng-repeat=""></option>-->
+                            </select>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                              <div class="form-group">
+                        <div class="form-group">
+                            <textarea class="form-control" ng-model="user.comment" placeholder="Your Comment *" id="message" required data-validation-required-message="Please enter your comment."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    </div>
+              
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                        <button ng-click="submitForm(user)" class="btn btn-xl"> Click Here To Post</button>
+                    </div>
+                    <a href="#login" class="text-center new-account">Back to Login </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
